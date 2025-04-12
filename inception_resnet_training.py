@@ -57,8 +57,8 @@ def main():
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda1)
     
     ## define and make text files to write traning progress monitoring to.
-    txt_file_train_av_name = 'model_data_training_output/inception_flair_train_epoch_average_e1.txt'
-    txt_file_val_name = 'model_data_training_output/inception_flair_validation_e1.txt'
+    txt_file_train_av_name = 'inception_flair_train_epoch_average_e1.txt'
+    txt_file_val_name = 'inception_flair_validation_e1.txt'
     
     txt_file_train = open(txt_file_val_name, 'a')
     txt_file_train.write("inception_net_flair")
@@ -165,7 +165,7 @@ def main():
             if metric_av < best_metric:
                 best_metric = metric_av
                 best_metric_epoch = epoch + 1
-                torch.save(model.state_dict(), "model_weights/best_model_inception_net_flair_e1.pth")
+                torch.save(model.state_dict(), "best_model_inception_net_flair_e1.pth")
                 print("saved new best metric model")
             print(
                 "current epoch: {} current accuracy: {:.4f} best accuracy: {:.4f} at epoch {}".format(
