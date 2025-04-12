@@ -59,8 +59,8 @@ def main():
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda1)
     
     ## define and create text files to be used for output of model traning moitoring. A file for training epoch average and validation performance is defined
-    txt_file_train_av_name = 'model_data_training_output/densenet_flair_train_epoch_average.txt'
-    txt_file_val_name = 'model_data_training_output/densenet_flair_validation.txt'
+    txt_file_train_av_name = 'densenet_flair_train_epoch_average.txt'
+    txt_file_val_name = 'densenet_flair_validation.txt'
     
     txt_file_train = open(txt_file_train_av_name, 'a')
     txt_file_train.write("densenet_flair")
@@ -169,7 +169,7 @@ def main():
             if metric_av < best_metric:
                 best_metric = metric_av
                 best_metric_epoch = epoch + 1
-                torch.save(model.state_dict(), "model_weights/best_model_densenet_flair.pth")
+                torch.save(model.state_dict(), "best_model_densenet_flair.pth")
                 print("saved new best metric model")
             print(
                 "current epoch: {} current accuracy: {:.4f} best accuracy: {:.4f} at epoch {}".format(
