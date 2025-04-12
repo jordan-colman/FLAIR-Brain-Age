@@ -41,14 +41,14 @@ def main():
     MAE_metric = torch.nn.L1Loss()
     
     ## load trained weights
-    model.load_state_dict(torch.load("model_weights/best_model_densenet_flair.pth"))
+    model.load_state_dict(torch.load("best_model_densenet_flair.pth"))
     model.eval()
     #optimizer = torch.optim.Adam(model.parameters(), 1e-5)
     
     
     ## define names of output files
-    txt_file_age_out_name = 'model_data_testing_output/densenet_flair_ages.txt'
-    txt_file_loss_out_name = 'model_data_testing_output/densenet_flair_metrics.txt'
+    txt_file_age_out_name = 'testing_densenet_flair_ages.txt'
+    txt_file_loss_out_name = 'testing_densenet_flair_metrics.txt'
     
     with torch.no_grad():
         num_correct = 0.0
