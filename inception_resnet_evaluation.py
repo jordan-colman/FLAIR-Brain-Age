@@ -40,7 +40,7 @@ def main():
     loss_function = torch.nn.MSELoss()
     MAE_metric = torch.nn.L1Loss()
     
-    model.load_state_dict(torch.load("best_model_inception_net_flair_e1.pth"))
+    model.load_state_dict(torch.load("best_MSE_model_inception_flair_r2_e3.pth"))
     model.eval()
     #optimizer = torch.optim.Adam(model.parameters(), 1e-5)
     
