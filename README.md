@@ -8,7 +8,7 @@ https://drive.google.com/drive/folders/1yp8r0ssYllz11cT-fDTNmC2vSXR5f7II?usp=sha
 
 Model was trained on inputed imaged aligned to MNI space 1mm^3. Images resampled to lower resolution in programme.
 
-The code can also be run in a Docker to evaluate 3D FLAIR images and can be dowloaded at: 
+The code can also be run in a Docker of the 3D Inspetion-ResNet ensemble model to evaluate 3D FLAIR images and can be dowloaded at: 
 https://drive.google.com/file/d/1QHBC0mVXoOBRtZEDbVI-V0S45hMFgbnY/view?usp=sharing
 
 Run Docker as docker run --rm \ -v `pwd`:/data \ flair-brainage-v1.0 \ compute_brainAge.sh \ /data/flair.nii.gz \ "chronological age"
