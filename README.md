@@ -25,4 +25,5 @@ Model perfomance on testing set of 174 scans is as follows:
 The code can also be run in a Docker of the 3D Inspetion-ResNet ensemble model to evaluate 3D FLAIR images and can be dowloaded at: 
 https://drive.google.com/file/d/1QHBC0mVXoOBRtZEDbVI-V0S45hMFgbnY/view?usp=sharing
 
+To run docker use following example code (where "flair.nii.gz" is scan to be analysied and "chronological age" is true age at time of scan):
 Run Docker as docker run --rm \ -v `pwd`:/data \ flair-brainage-v1.0 \ compute_brainAge.sh \ /data/flair.nii.gz \ "chronological age"
