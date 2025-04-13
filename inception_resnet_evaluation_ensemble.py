@@ -43,15 +43,15 @@ def main():
     MAE_metric = torch.nn.L1Loss()
     
     ## load the 5 sets of modle weights
-    model1.load_state_dict(torch.load("best_model_inception_net_flair_e1.pth"))
+    model1.load_state_dict(torch.load("best_MSE_model_inception_flair_r2_e3.pth"))
     model1.eval()
-    model2.load_state_dict(torch.load("best_model_inception_net_flair_e2.pth"))
+    model2.load_state_dict(torch.load("best_MSE_model_inception_flair_r2_e4.pth"))
     model2.eval()
-    model3.load_state_dict(torch.load("best_model_inception_net_flair_e3.pth"))
+    model3.load_state_dict(torch.load("best_MSE_model_inception_flair_r2_e6.pth"))
     model3.eval()
-    model4.load_state_dict(torch.load("best_model_inception_net_flair_e4.pth"))
+    model4.load_state_dict(torch.load("best_MSE_model_inception_flair_r2_e7.pth"))
     model4.eval()
-    model5.load_state_dict(torch.load("best_model_inception_net_flair_e15.pth"))
+    model5.load_state_dict(torch.load("best_MSE_model_inception_flair_r2_e10.pth"))
     model5.eval()  
     
     ## define output file names
